@@ -22,7 +22,7 @@
       return;
     } else {
       // @ts-ignore
-      socket.emit('messageCreate', `${$personObject.name}: ${message}`, $personObject.id)
+      socket.emit('messageCreate', `${$personObject.name}: ${message}`, $personObject.id, $selectedPerson.id)
       message = "";
     }
     
@@ -31,10 +31,10 @@
   }
   
   onMount(() => {
-    socket.on('message', (message, id) => {
+    socket.on('message', (message, id, to) => {
       // @ts-ignore
-      console.log(messages, id);
-      if (id == $selectedPerson.id || id == $personObject.id) {
+      console.log('m', messages, id, to);
+      if (to == $selectedPerson.id && id == $personObject.id || id == $selectedPerson.id && to == $personObject.id) {
         if (messages[$selectedPerson.id]) {
           messages[$selectedPerson.id] = [...messages[$selectedPerson.id], message];
         } else {

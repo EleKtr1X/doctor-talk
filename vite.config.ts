@@ -11,8 +11,8 @@ const webSocketServer = {
 
 		io.on('connection', (socket) => {
 			socket.emit('connected', 'Hello, World 👋')
-  socket.on('messageCreate', (message, id) => { 
-    io.emit('message', message, id);
+  socket.on('messageCreate', (message, id, to) => { 
+    io.emit('message', message, id, to);
     console.log(`message sent, ${message}`)
   });
 		})
