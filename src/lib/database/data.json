@@ -1,0 +1,44 @@
+[
+  {
+    "id" : 0,
+    "name" : "Tugrul Guran",
+    "email" : "tugrulguran@gmail.com",
+    "password" : "123",
+    "patients" : [
+      {
+        "id" : 1,
+        "name": "Bob Smith",
+        "email" : "bobsmith@gmail.com",
+        "password" : "iambob",
+        "prescription" : [
+          {
+            "name": "Ibuprofen",
+            "amountPrescribed": "200mg"
+          },
+          {
+            "name": "Loratadine",
+            "amountPrescribed": "10mg"
+          }
+        ],
+        "notes": ["Note"]
+      },
+      {
+        "id" : 2,
+        "name": "Ethan Wright",
+        "email" : "ethanw@gmail.com",
+        "password" : "mynameisethan1123",
+        "prescription" : [
+          {
+            "name": "Hydrochlorothiazide",
+            "amountPrescribed": "25mg"
+          },
+          {
+            "name": "Lisinopril",
+            "amountPrescribed": "10mg"
+          }
+        ],
+        "notes": []
+      }
+    ]
+  }
+]
